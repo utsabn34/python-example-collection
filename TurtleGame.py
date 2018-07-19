@@ -49,3 +49,10 @@ goblin.penup()
 goblin.goto(-160,10)
 goblin.pendown()
 
+#racing four turtles on a track with random numbers
+for turn in range(100):
+  ada.forward(randint(1,5))
+  bob.forward(randint(1,5))
+  charles.forward(randint(1,5))
+  goblin.forward(randint(1,5))
+
