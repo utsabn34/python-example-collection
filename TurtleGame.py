@@ -17,3 +17,35 @@ for step in range(15):
   left(90)
   forward(20)
 
+#creating turtle1
+ada =Turtle()
+ada.color('red')
+ada.shape('turtle')
+ada.penup()
+ada.goto(-160,100)
+ada.pendown()
+
+#creating turtle 2
+bob =Turtle()
+bob.color('blue')
+bob.shape('turtle')
+bob.penup()
+bob.goto(-160,70)
+bob.pendown()
+
+#creating turtle3
+charles =Turtle()
+charles.color('yellow')
+charles.shape('turtle')
+charles.penup()
+charles.goto(-160,40)
+charles.pendown()
+
+#creating turtle3
+goblin =Turtle()
+goblin.color('green')
+goblin.shape('turtle')
+goblin.penup()
+goblin.goto(-160,10)
+goblin.pendown()
+
