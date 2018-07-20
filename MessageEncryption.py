@@ -1,6 +1,6 @@
 #!/bin/python3
 
-alphabet = 'abcdefghijklmnopqrstuvwxyz' //alphabet list for encryption
+alphabet = 'qwertyuioplkjhgfdsazxcvbnm0987654321' //creating random alphabet list for encryption
 key =3
 character = input('Enter a character')
 position = alphabet.find(character)
