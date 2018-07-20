@@ -1,9 +1,9 @@
 #!/bin/python3
 
 alphabet = 'qwertyuioplkjhgfdsazxcvbnm0987654321' //creating random alphabet list for encryption
-key =3
 newMessage =''
 message = input('Enter a message to encrypt: ')
+key = int(input('Enter a key to encrypt message: '))
 for character in message:
   if character in alphabet:
     position = alphabet.find(character)
