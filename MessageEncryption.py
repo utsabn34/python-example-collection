@@ -2,8 +2,13 @@
 
 alphabet = 'qwertyuioplkjhgfdsazxcvbnm0987654321' //creating random alphabet list for encryption
 key =3
-character = input('Enter a character')
-position = alphabet.find(character)
-newPosition = (position + key) % 26
-print(newPosition)
-newCharacter = alphabet[newPosition]
+newMessage =''
+message = input('Enter a message to encrypt: ')
+for character in message:
+  
+  position = alphabet.find(character)
+  newPosition = (position + key) % 36
+  newCharacter = alphabet[newPosition]
+  newMessage += newCharacter
+  
+print ('Your encrypted message is: ', newMessage)
