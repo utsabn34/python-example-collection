@@ -1,0 +1,5 @@
+Dog 6
+cat 4
+Snake 7
+Hamster 3
+Pig 1
