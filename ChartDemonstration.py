@@ -2,18 +2,6 @@
 
 import pygal
 
-#rendering data from file
-#piechart
-file = open('pets.txt', 'r')
-piechart2 = pygal.Pie()
-for line in file.read().splitlines():
-  if line:
-    label, value = line.split(' ')
-    piechart2.add(label, int(value))
-file.close()
-piechart2.render()
-
-
 #rendering static data
 #piechart
 piechart = pygal.Pie()
@@ -27,24 +15,31 @@ piechart.render()
 
 
 #rendering data from file
-#barchart
+map = {}
 file = open('pets.txt', 'r')
-barchart2 = pygal.Bar()
+
+#adding file content in a map
 for line in file.read().splitlines():
   if line:
     label, value = line.split(' ')
-    barchart2.add(label, int(value))
+    map[label] =value    
 file.close()
-barchart2.render()
 
-#rendering static data
-#barchart
+
+piechart2 = pygal.Pie()
 barchart = pygal.Bar()
-barchart.title = 'Favourite Animal'
-barchart.add('Dog', 6)
-barchart.add('Cat',5)
-barchart.add('Cow', 7)
-barchart.add('Snake', 2)
-barchart.add('Hamster', 3)
+linechart = pygal.Line()
+
+#populating data in different chart
+for label in map:
+  piechart2.add(label, int(map.get(label)))
+  barchart.add(label, int(map.get(label)))
+  linechart.add(label, int(map.get(label)))
+  
+  
+#displaying chart
+piechart2.render()
 barchart.render()
+linechart.render()
+
 
